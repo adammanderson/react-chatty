@@ -26,6 +26,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "7.1.4",
+    "babel-plugin-emotion": "^9.2.8",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "gh-pages": "^1.2.0",
@@ -37,6 +38,7 @@
     "webpack-dev-server": "^3.1.8"
   },
   "dependencies": {
-    "emotion": "^9.2.8"
+    "emotion": "^9.2.8",
+    "react-emotion": "^9.2.8"
   }
 }

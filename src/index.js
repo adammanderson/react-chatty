@@ -1,7 +1,9 @@
-import React from 'react';
+import React from 'react'
+import ChattyWrapper from './components/ChattyWrapper'
 
 const Chatty = () => (
-  <p>Chatty</p>
-);
+  <ChattyWrapper>
+  </ChattyWrapper>
+)
 
-export default Chatty;
+export default Chatty
