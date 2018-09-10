@@ -1,6 +1,6 @@
 {
   "name": "react-chatty",
-  "version": "0.0.3",
+  "version": "0.0.31",
   "description": "Chat UI built with React",
   "main": "dist/index.js",
   "scripts": {
