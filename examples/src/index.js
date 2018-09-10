@@ -15,14 +15,13 @@ injectGlobal`
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 600px;
     height: 100%;
   }
 `
 
 const Wrapper = styled.div`
   height: 100vh;
-  max-width: 400px;
+  width: 100vw;
 `
 
 const App = () => (
