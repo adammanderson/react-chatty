@@ -1,17 +1,20 @@
 {
   "name": "react-chatty",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "Chat UI built with React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
     "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run transpile"
+    "prepublishOnly": "npm run transpile",
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d examples/dist",
+    "publish-demo": "npm run build && npm run deploy"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/adammanderson/react-chatty"
+    "type": "git",
+    "url": "https://github.com/adammanderson/react-chatty"
   },
   "author": "Adam Anderson",
   "license": "ISC",
@@ -25,6 +28,7 @@
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
