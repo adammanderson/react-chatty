@@ -1,6 +1,6 @@
 {
   "name": "react-chatty",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Chat UI built with React",
   "main": "dist/index.js",
   "scripts": {
@@ -35,5 +35,8 @@
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "emotion": "^9.2.8"
   }
 }
