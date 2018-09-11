@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bubble renders with theme 1`] = `
+<div
+  className="css-ra4cbz e193rrgr0"
+  type="user"
+>
+  <span
+    className="css-5i98md e193rrgr1"
+    type="user"
+  >
+    Test
+  </span>
+</div>
+`;
