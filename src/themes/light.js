@@ -1,26 +1,35 @@
 const light = {
+  header: {
+    background: '#823be3',
+  },
   chat: {
     background: 'white'
   },
   bubble: [
     {
       type: 'user',
-      foreground: '#323232',
-      background: '#efefef',
-      align: 'right'
+      color: '#ffffff',
+      background: '#823be3',
+      align: 'flex-end'
     },
     {
       type: 'agent',
-      foreground: 'white',
-      background: 'blue',
-      align: 'left'
+      color: '#031931',
+      background: '#ecf3f9',
+      align: 'flex-start'
     },
     {
       type: 'waiting',
-      foreground: 'blue',
-      background: 'lightGrey'
+      color: '#031931',
+      background: '#ecf3f9',
+      align: 'flex-start'
     }
-  ]
+  ],
+  composer: {
+    borderColor: '#dce9f1',
+    background: '#ffffff',
+    color: '#031930'
+  }
 }
 
 export default light

@@ -11,13 +11,21 @@ class Chatty extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isFocused: true
+      isFocused: true,
+      isTyping: false
     }
   }
 
-  toggleFocus() {
+  onBlur() {
     this.setState(state => ({
-      isFocused: !state.isFocused
+      isFocused: false
+    }))
+  }
+
+  isTyping(typing) {
+    this.setState(state => ({
+      isFocused: true,
+      isTyping: typing
     }))
   }
 
@@ -34,7 +42,8 @@ class Chatty extends React.Component {
           />
           <Composer
             isFocused={isFocused}
-            onActive={this.toggleFocus.bind(this)}
+            isTyping={this.isTyping.bind(this)}
+            onBlur={this.onBlur.bind(this)}
           />
         </ChattyWrapper>
       </ThemeProvider>

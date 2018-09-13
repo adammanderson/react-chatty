@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 
 const App = () => (
   <Wrapper>
-    <Chatty theme="dark"/>
+    <Chatty theme="light"/>
   </Wrapper>
 )
 

@@ -6,25 +6,36 @@ const ComposerWrapper = styled.div`
   flex-flow: column wrap;
   max-height: 105px;
   overflow: scroll;
-  margin: 0 1em;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid ${props => props.theme.composer.borderColor};
 `
 
 const ComposerInput = styled.div`
   flex: 1;
   padding: 1.5em;
-  color: white;
+  color: ${props => props.theme.composer.color};
   outline: none;
+  &:empty:before {
+    content: attr(placeholder);
+    display: block;
+  }
 `
 
 class Composer extends React.Component {
+  handleTyping(e) {
+    this.props.isTyping()
+  }
+  
   render() {
+    const { isFocused, onBlur } = this.props
+
     return (
       <ComposerWrapper innerRef={node => this.composer = node}>
         <ComposerInput
           innerRef={node => this.composerInput = node}
           contentEditable
-          onClick={this.props.onActive}
+          onBlur={onBlur.bind(this)}
+          onInput={(e) => this.handleTyping(e)}
+          placeholder="Type a message..."
         />
       </ComposerWrapper>
     )

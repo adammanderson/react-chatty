@@ -17,7 +17,7 @@ class Chat extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if(prevProps.isFocused !== this.props.isFocused) {
+    if(prevProps.isFocused !== this.props.isFocused && this.props.isFocused) {
       this.focusChat()
     }
   }

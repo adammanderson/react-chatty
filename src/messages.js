@@ -1,7 +1,7 @@
 const messages = [
   {
     type: 'agent',
-    content: 'Hey there, how can I help?'
+    content: 'Hey there, _how_ can I help?'
   },
   {
     type: 'user',
@@ -17,7 +17,7 @@ const messages = [
   },
   {
     type: 'user',
-    content: 'Here\'s the forecast: Tonight will start dry with clear periods. Cloud may thicken through the last few hours of the night. A gentle southwesterly breeze can be expected.'
+    content: '**Here\'s the forecast: Tonight will start dry with clear periods.**Cloud may thicken through the last few hours of the night. A gentle southwesterly breeze can be expected.'
   },
   {
     type: 'agent',

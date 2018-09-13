@@ -46,6 +46,7 @@
   "dependencies": {
     "emotion": "^9.2.8",
     "emotion-theming": "^9.2.6",
+    "marked": "^0.5.0",
     "prop-types": "^15.6.2",
     "react-emotion": "^9.2.8"
   }
