@@ -7,7 +7,7 @@ import Avatar from './Avatar'
 const MessageWrapper = styled.div`
   display: flex;
   flex-flow: ${props => props.type === 'agent' ? 'row nowrap' : 'row-reverse nowrap'};
-  margin-bottom: 1.3em;
+  margin-bottom: 1.8em;
   align-items: flex-end;
 `
 
