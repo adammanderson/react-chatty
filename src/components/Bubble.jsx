@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import marked from 'marked'
+import Moment from 'react-moment'
 import styled from 'react-emotion'
 
 const BubbleWrapper = styled.div`
@@ -10,7 +11,7 @@ const BubbleWrapper = styled.div`
   align-items: ${props => props.theme.bubble.find(b => b.type === props.type).align}
 `
 
-const BubbleContent = styled.span`
+const BubbleInner = styled.div`
   padding: 0.9em 1.2em;
   max-width: 70%;
   line-height: 1.5em;
@@ -22,18 +23,36 @@ const BubbleContent = styled.span`
   }
 `
 
+const BubbleTime = styled.div`
+  margin: 0.8em 0 0 0;
+  font-size: 0.9em;
+  text-align: right;
+  line-height: 1.1em;
+  opacity: 0.7;
+`
+
 const Bubble = (props) => (
-  <BubbleWrapper type={props.type}>
-    <BubbleContent
-      type={props.type}
-      dangerouslySetInnerHTML={{__html: marked(props.content)}}
-    />
+  <BubbleWrapper type={props.message.type}>
+    <BubbleInner type={props.message.type}>
+      <div
+        dangerouslySetInnerHTML={{__html: marked(props.message.content)}}
+      />
+      { props.message.time &&
+        <BubbleTime>
+          <Moment
+            date={props.message.time}
+            format="HH:mma"
+          />
+        </BubbleTime>
+      }
+    </BubbleInner>
   </BubbleWrapper>
 )
 
 Bubble.propTypes = {
-  content: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['user', 'agent', 'waiting']).isRequired
+  message: PropTypes.shape({
+    type: PropTypes.oneOf(['user', 'agent', 'waiting']).isRequired
+  }).isRequired
 }
 
 export default Bubble

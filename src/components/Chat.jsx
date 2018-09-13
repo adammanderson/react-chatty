@@ -33,8 +33,7 @@ class Chat extends React.Component {
         {this.props.conversation.map((message, index) =>
           <Bubble
             key={index}
-            content={message.content}
-            type={message.type}
+            message={message}
           />
         )}
       </ChatWrapper>
