@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bubble renders with theme 1`] = `
+exports[`Message renders with theme 1`] = `
 <div
   className="css-1pt9r9f e12o4ec70"
   type="user"

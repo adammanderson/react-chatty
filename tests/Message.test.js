@@ -10,7 +10,7 @@ const testMessage =  {
     time: '2018-09-13T14:10:13'
 }
 
-test('Bubble renders with theme', () => {
+test('Message renders with theme', () => {
   const component = renderer.create(
     <ThemeProvider theme={THEMES.light}>
       <Message
