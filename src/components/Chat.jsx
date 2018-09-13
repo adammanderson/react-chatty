@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'react-emotion'
-import Bubble from './Bubble'
+import Message from './Message'
 
 const ChatWrapper = styled.div`
   flex: 1;
-  padding: 1.5em;
+  padding: 1.5em 0;
   background: ${props => props.theme.chat.background};
   overflow: scroll;
   scroll-behavior: smooth;
@@ -31,7 +31,7 @@ class Chat extends React.Component {
     return (
       <ChatWrapper innerRef={node => this.chat = node}>
         {this.props.conversation.map((message, index) =>
-          <Bubble
+          <Message
             key={index}
             message={message}
           />

@@ -20,8 +20,8 @@ injectGlobal`
 `
 
 const Wrapper = styled.div`
-  height: 550px;
-  width: 360px;
+  height: 600px;
+  width: 420px;
 `
 
 const App = () => (
